@@ -1,22 +1,20 @@
-import { Button } from "@/components/ui/button";
-import { APP_LOGO, APP_TITLE } from "@/const";
+import { useEffect } from "react";
 
 /**
- * All content in this page are only for example, delete if unneeded
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * Redirect to the trust agreement customizer in public folder
  */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
-  // Use APP_LOGO (as image src) and APP_TITLE if needed
+  useEffect(() => {
+    // Redirect to the actual trust agreement app
+    window.location.href = '/index.html';
+  }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        Example Page
-        <Button variant="default">Example Button</Button>
-      </main>
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="text-center">
+        <p className="text-lg">Redirecting to Trust Agreement Customizer...</p>
+      </div>
     </div>
   );
 }
+
